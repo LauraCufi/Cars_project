@@ -7,6 +7,18 @@ import pyarrow as pa
 df = pd.read_csv('vehicles_us.csv')
 df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
 
+
+from pyarrow import csv
+
+def skip_comment(row):
+    if row.text.startswith("# "):
+        return 'skip'
+    else:
+        return 'error'
+
+parse_options = csv.ParseOptions(invalid_row_handler=skip_comment)
+test_arrow = csv.read_csv(test_file, parse_options=parse_options)
+
 st.header('Data viewer')
 show_manuf_1k_ads = st.checkbox('Include manufacturers with less than 1000 ads')
 if not show_manuf_1k_ads:
