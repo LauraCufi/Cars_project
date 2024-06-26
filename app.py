@@ -48,7 +48,7 @@ st.header('Histogram of `condition` vs `model_year`')
 # works, but too many lines of code
 # -------------------------------------------------------
 
- histograms in plotly_express:
+# histograms in plotly_express:
 st.write(px.histogram(df, x='model_year', color='condition'))
 # a lot more concise!
 # -------------------------------------------------------
