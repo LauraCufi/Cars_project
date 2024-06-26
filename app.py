@@ -13,7 +13,7 @@ st.sidebar.header("User input features")
 
 
 sorted_unique_year=sorted(df.model_year.unique())
-selected_year=st.sidebar.slider("Select year model",1999,2014,5)
+selected_year=st.sidebar.slider(1999,2014)
 
 sorted_unique_model=sorted(df.model.unique())
 selected_model=st.sidebar.multiselect("Model",sorted_unique_model,sorted_unique_model)
