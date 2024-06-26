@@ -19,7 +19,7 @@ selected_model=st.sidebar.multiselect("Model",sorted_unique_model,sorted_unique_
 unique_condition=['excellent','fair','good','like new','new','salvage']
 selected_contidion=st.sidebar.multiselect('Condition',unique_condition,unique_condition)
 
-df_selected_model=df[(df.model(selected_model))&(df.condition.isin(selected_contidion))]
+df_selected_model=df[(df.model.isin(selected_model))&(df.condition.isin(selected_contidion))]
 
 st.header("Display model and contion cars")
 st.write("Data Dimension: "+str(df_selected_model.shape[0])+"rows and "+str(df_selected_model.shape[1]))
