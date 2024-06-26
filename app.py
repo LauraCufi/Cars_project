@@ -28,7 +28,7 @@ st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df
 st.dataframe(df_selected_model)
 
 st.header('Model year vs days listed')
-fig = px.histogram(df, x='model_year', days_listed='days_listed')
+fig = px.histogram(df, x='model_year')
 st.write(fig)
 
 
