@@ -16,7 +16,7 @@ sorted_unique_year=sorted(df.model_year.unique())
 selected_year=st.sidebar.slider(1999,2014)
 
 sorted_unique_model=sorted(df.model.unique())
-selected_model=st.sidebar.multiselect("Model",sorted_unique_model,sorted_unique_model)
+selected_model=st.sidebar.selectbox('Year', list(reversed(range(1999,2014))))
 
 unique_condition=['excellent','fair','good','like new','new','salvage']
 selected_contidion=st.sidebar.multiselect('Condition',unique_condition,unique_condition)
