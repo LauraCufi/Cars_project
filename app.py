@@ -5,8 +5,7 @@ import plotly.graph_objects as go
 import pyarrow as pa
 
 df = pd.read_csv('vehicles_us.csv')
-
-#df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
+df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
 
 st.header('Car advertisement dataset')
 st.markdown("In this project, the data of a car dealer will be analyzed")
