@@ -27,9 +27,6 @@ st.header("Display model and contion cars")
 st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df_selected_model.shape[1]) + ' columns.')
 st.dataframe(df_selected_model)
 
-st.header('Model vs price')
-st.write(px.histogram(df, x='manufacturer', color='price'))
-
 
 
 st.header('Vehicle types by manufacturer')
