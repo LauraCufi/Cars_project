@@ -28,8 +28,8 @@ st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df
 st.dataframe(df_selected_model)
 
 st.header('Model year vs days listed')
-st.write(px.histogram(df, x='model_year', color='days_listed ))
-st.header('Histogram of `condition` vs `model_year`')
+fig = px.histogram(df, x='model_year', color='days_listed ')
+st.write(fig)
 
 
 
