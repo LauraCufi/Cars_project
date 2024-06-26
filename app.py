@@ -8,7 +8,16 @@ df = pd.read_csv('vehicles_us.csv')
 df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
 
 
-st.header('Data viewer')
+st.header('Car advertisement dataset')
+st.markdown("In this project, the data of a car dealer will be analyzed")
+st.sidebar.header("User input features")
+model_year=st.sidebar.selectbox('Model year',list(range(1908,2019)))
+
+
+
+
+
+
 show_manuf_1k_ads = st.checkbox('Include manufacturers with less than 1000 ads')
 if not show_manuf_1k_ads:
     df = df.groupby('manufacturer').filter(lambda x: len(x) > 1000)
