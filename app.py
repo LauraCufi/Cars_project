@@ -37,7 +37,7 @@ st.dataframe(df)
 st.header('Vehicle types by manufacturer')
 st.write(px.histogram(df, x='manufacturer', color='type'))
 st.header('Histogram of `condition` vs `model_year`')
-# -------------------------------------------------------
+
 # -------------------------------------------------------
 # histograms in plotly:
 # fig = go.Figure()
