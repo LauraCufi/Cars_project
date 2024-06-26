@@ -29,10 +29,6 @@ st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df
 st.dataframe(df_selected_model)
 
 
-show_manuf_1k_ads = st.checkbox('Include manufacturers with less than 1000 ads')
-if not show_manuf_1k_ads:
-    df = df.groupby('manufacturer').filter(lambda x: len(x) > 1000)
-
 st.dataframe(df)
 st.header('Vehicle types by manufacturer')
 st.write(px.histogram(df, x='manufacturer', color='type'))
