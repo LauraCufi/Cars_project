@@ -27,11 +27,15 @@ st.header("Display model and contion cars")
 st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df_selected_model.shape[1]) + ' columns.')
 st.dataframe(df_selected_model)
 
+st.header('Model year vs days listed')
+st.write(px.histogram(df, x='model_year', color='days_listed ))
+st.header('Histogram of `condition` vs `model_year`')
 
-st.dataframe(df)
+
+
 st.header('Vehicle types by manufacturer')
 st.write(px.histogram(df, x='manufacturer', color='type'))
-st.header('Histogram of `condition` vs `model_year`')
+
 
 # -------------------------------------------------------
 # histograms in plotly:
