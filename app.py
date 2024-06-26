@@ -27,9 +27,8 @@ st.header("Display model and contion cars")
 st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df_selected_model.shape[1]) + ' columns.')
 st.dataframe(df_selected_model)
 
-st.header('Model year vs days listed')
-fig = px.histogram(df, x='model_year')
-st.write(fig)
+st.header('Model vs price')
+st.write(px.histogram(df, x='manufacturer', color='price'))
 
 
 
@@ -37,20 +36,6 @@ st.header('Vehicle types by manufacturer')
 st.write(px.histogram(df, x='manufacturer', color='type'))
 
 
-# -------------------------------------------------------
-# histograms in plotly:
-# fig = go.Figure()
-# fig.add_trace(go.Histogram(x=df[df['condition']=='good']['model_year'], name='good'))
-# fig.add_trace(go.Histogram(x=df[df['condition']=='excellent']['model_year'], name='excellent'))
-# fig.update_layout(barmode='stack')
-# st.write(fig)
-# works, but too many lines of code
-# -------------------------------------------------------
-
-# histograms in plotly_express:
-st.write(px.histogram(df, x='model_year', color='condition'))
-# a lot more concise!
-# -------------------------------------------------------
 
 st.header('Compare price distribution between manufacturers')
 manufac_list = sorted(df['manufacturer'].unique())
