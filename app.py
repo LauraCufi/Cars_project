@@ -28,7 +28,7 @@ st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df
 st.dataframe(df_selected_model)
 
 st.header('Condition vs price')
-st.write(px.histogram(df, x='condition', color='price'))
+st.write(px.histogram(df, x='price', color='condition'))
 
 
 
