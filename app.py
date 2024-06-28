@@ -30,10 +30,7 @@ st.dataframe(df_selected_model)
 st.header('Condition vs price')
 st.write(px.histogram(df, x='fuel', color='condition'))
 
-st.markdown("The bar chart compares the condition of the vehicle, which can be: excellent, new, like new, good, acceptable and salvage, with the price.
-We can conclude that gas vehicles, which have the greatest offer in general, also have the greatest offer in terms of vehicle conditions, counting all of them, with the highest price being in "excellent" condition.
-
-On the other hand, electric fuel vehicles do not have such a variety, in fact, they do not have options available in "acceptable" quality and in the same way the price is not that high.")
+st.markdown('The bar chart compares the condition of the vehicle, which can be: excellent, new, like new, good, acceptable and salvage, with the price. We can conclude that gas vehicles, which have the greatest offer in general, also have the greatest offer in terms of vehicle conditions, counting all of them, with the highest price being in "excellent" condition. On the other hand, electric fuel vehicles do not have such a variety, in fact, they do not have options available in "acceptable" quality and in the same way the price is not that high.')
 
 
 st.header('Vehicle types by manufacturer')
