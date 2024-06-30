@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import plotly_express as px
@@ -29,9 +30,10 @@ st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df
 st.dataframe(df_selected_model)
 
 st.header('Condition vs price')
-st.write(px.bar(df, x='condition',y='price'))
+y=price.mean()
+st.write(px.bar(df, x='condition',y='y'))
 
-st.markdown('The bar chart compares the condition of the vehicle, which can be: excellent, new, like new, good, acceptable and salvage, with the price. We can conclude that gas vehicles, which have the greatest offer in general, also have the greatest offer in terms of vehicle conditions, counting all of them, with the highest price being in "excellent" condition. On the other hand, electric fuel vehicles do not have such a variety, in fact, they do not have options available in "acceptable" quality and in the same way the price is not that high')
+st.markdown('The bar chart compares the condition of the vehicle, which can be: excellent, new, like new, good, acceptable and salvage, with the price. We can conclude that gas vehicles, which have the greatest offer in general, also have the greatest offer in terms of vehicle conditions, counting all of them, with the highest price being in "excellent" condition.')
 
 
 st.header('Vehicle types by manufacturer')
