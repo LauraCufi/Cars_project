@@ -13,6 +13,10 @@ The sidebar offers the option to filter the total data, by year, model and condi
 The source code of the project is located in the app.py file in the Cars_project repository. Additionally, the project is displayed in Render in the following link:
 
 https://cars-project-53px.onrender.com/
+
+The jupyterNotebook file is located in the following link. In this file a pre-processing and some exploratory data analysis (supplemented with a few charts) and conclusions are carried out on the original dataframe
+
+https://github.com/LauraCufi/Cars_project/blob/main/Car_project_pre-process_data.ipynb
 ```
 code blocks for commands
 ```
