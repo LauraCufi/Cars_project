@@ -29,10 +29,10 @@ st.header("Display model and contion cars")
 st.write("Data Dimension: "+ str (df_selected_model.shape[0])+"rows and "+str(df_selected_model.shape[1]) + ' columns.')
 st.dataframe(df_selected_model)
 
-st.header("The bar graph shows a comparison between the types of vehicles offered and the list price. Truck is the type of vehicle with the highest price, exceeding 200 million. SUV and Pickup also have high prices, but not as much as Trucks. Most other vehicle types (Coupe, Van, Convertible, Hatchback, Wagon, Mini-Van, Other, Offroad, Bus) have considerably lower prices, usually below 50 million. Bus is the type of vehicle with the lowest price. Conclusion: There is great variability in the prices of different types of vehicles. Trucks dominate in terms of price, followed by SUVs and Pickups. Many other types of vehicles have relatively low prices compared to Trucks, SUVs, and Pickups.")
+st.header("Type vs price")
 st.write(px.bar(df,x='type', y='price'))
 
-st.markdown('')
+st.markdown('The bar graph shows a comparison between the types of vehicles offered and the list price. Truck is the type of vehicle with the highest price, exceeding 200 million. SUV and Pickup also have high prices, but not as much as Trucks. Most other vehicle types (Coupe, Van, Convertible, Hatchback, Wagon, Mini-Van, Other, Offroad, Bus) have considerably lower prices, usually below 50 million. Bus is the type of vehicle with the lowest price. Conclusion: There is great variability in the prices of different types of vehicles. Trucks dominate in terms of price, followed by SUVs and Pickups. Many other types of vehicles have relatively low prices compared to Trucks, SUVs, and Pickups.")
 
 
 st.header('Vehicle types by manufacturer')
