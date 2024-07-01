@@ -31,10 +31,9 @@ st.dataframe(df_selected_model)
 
 st.header("Type vs price")
 #st.pyplot(df.groupby('type')['price'].mean().plot(kind='bar'))
-mean_prices = df.groupby('type')['price'].mean()
-fig, ax = plt.subplots()
-mean_prices.plot(kind='bar', ax=ax)
-st.pyplot(fig)
+mean_prices = df.groupby('type')['price'].mean().reset_index()
+fig = px.bar(mean_prices, x='type', y='price')
+fig.show()
 
 
 
